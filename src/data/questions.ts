@@ -4415,20 +4415,488 @@ export const QUESTIONS: Record<string, Question[]> = {
   },
 
 ],
-  oop: [
+    oop: [
     {
-  id: 'oop-1',
-  categoryId: 'oop',
-  text: 'A payment system supports CreditCard, PayPal, and UPI payments. Each payment type implements its own processPayment() method. Your code should process any payment without checking which payment type it receives. Which OOP principle best solves this problem?',
-  options: [
-    'Encapsulation',
-    'Inheritance',
-    'Polymorphism',
-    'Composition'
+      id: 'oop-1',
+      categoryId: 'oop',
+      text: 'Why is object-oriented programming useful when building a large application that will grow over time?',
+      options: [
+        'It organizes related data and behavior into reusable components',
+        'It removes the need to maintain separate modules in applications',
+        'It guarantees every application will execute faster than procedural code',
+        'It automatically prevents every possible programming error in applications'
+      ],
+      correctOptionIndex: 0,
+    },
+    {
+      id: 'oop-2',
+      categoryId: 'oop',
+      text: 'A user profile contains private payment information that should not be changed directly by other parts of the application. Which OOP principle is most appropriate?',
+      options: [
+        'Inheritance allows child classes to directly modify sensitive properties',
+        'Encapsulation hides internal data behind controlled methods or properties',
+        'Polymorphism allows unrelated classes to access the same private information',
+        'Abstraction exposes every internal implementation detail through public methods'
+      ],
+      correctOptionIndex: 1,
+    },
+    {
+      id: 'oop-3',
+      categoryId: 'oop',
+      text: 'A payment system supports CreditCard, PayPal, and UPI, each implementing its own payment process. Which OOP concept best fits this design?',
+      options: [
+        'Encapsulation because every payment implementation stores private variables',
+        'Inheritance because every payment type must share identical implementation code',
+        'Polymorphism because different payment objects can share the same interface',
+        'Composition because every payment type must contain another payment object'
+      ],
+      correctOptionIndex: 2,
+    },
+    {
+      id: 'oop-4',
+      categoryId: 'oop',
+      text: 'A company wants to expose a simple sendMessage() operation while hiding complex email, SMS, and notification implementation details. What should be used?',
+      options: [
+        'Inheritance to expose every implementation detail through a parent class',
+        'Encapsulation to make every internal notification class directly accessible',
+        'Polymorphism to force every notification implementation into separate APIs',
+        'Abstraction to expose a simple interface while hiding implementation details'
+      ],
+      correctOptionIndex: 3,
+    },
+    {
+      id: 'oop-5',
+      categoryId: 'oop',
+      text: 'Several classes repeat the same validation and logging logic. What is the most maintainable OOP approach?',
+      options: [
+        'Move shared behavior into a reusable abstraction or carefully designed base component',
+        'Copy the validation logic into every class so each class remains independent',
+        'Create separate versions of the same logic for every application feature',
+        'Keep duplicate logic because changing shared code can create maintenance problems'
+      ],
+      correctOptionIndex: 0,
+    },
+    {
+      id: 'oop-6',
+      categoryId: 'oop',
+      text: 'A reporting service directly creates a MySQL repository inside its constructor, making testing difficult. Which practice would improve the design?',
+      options: [
+        'Use inheritance so the reporting service becomes a database implementation',
+        'Use dependency injection so the repository implementation can be supplied externally',
+        'Use polymorphism by creating additional reporting service subclasses for each database',
+        'Use encapsulation by making the database connection publicly accessible to tests'
+      ],
+      correctOptionIndex: 1,
+    },
+    {
+      id: 'oop-7',
+      categoryId: 'oop',
+      text: 'An application needs different discount algorithms for regular, premium, and enterprise customers. Which design pattern is a strong fit?',
+      options: [
+        'Factory Pattern because every customer must create a separate discount object',
+        'Observer Pattern because discounts should automatically notify every customer',
+        'Strategy Pattern because interchangeable algorithms can be selected at runtime',
+        'Adapter Pattern because each discount algorithm must translate between interfaces'
+      ],
+      correctOptionIndex: 2,
+    },
+    {
+      id: 'oop-8',
+      categoryId: 'oop',
+      text: 'A legacy payment library has an incompatible API, but the application expects a standard PaymentProcessor interface. What should you use?',
+      options: [
+        'Singleton Pattern to guarantee that only one payment object exists in memory',
+        'Observer Pattern to notify the application whenever the legacy library changes',
+        'Builder Pattern to construct payment objects using the legacy library methods',
+        'Adapter Pattern to translate the legacy interface into the expected application interface'
+      ],
+      correctOptionIndex: 3,
+    },
+    {
+      id: 'oop-9',
+      categoryId: 'oop',
+      text: 'A base Bird class has a fly() method, but a Penguin subclass cannot meaningfully support flying. What design problem does this reveal?',
+      options: [
+        'The inheritance hierarchy violates substitutability because the child cannot honor the parent contract',
+        'The abstraction is correct because every bird should always inherit every bird-related behavior',
+        'The encapsulation is incorrect because private fields should automatically support flying',
+        'The polymorphism is correct because subclasses are allowed to reject inherited behavior'
+      ],
+      correctOptionIndex: 0,
+    },
+    {
+      id: 'oop-10',
+      categoryId: 'oop',
+      text: 'A service class handles database access, email sending, report generation, and file storage. Which SOLID principle is most clearly being violated?',
+      options: [
+        'Open/Closed Principle because the service contains too many independent implementation methods',
+        'Single Responsibility Principle because one class has several unrelated responsibilities',
+        'Liskov Substitution Principle because the service cannot replace another implementation',
+        'Interface Segregation Principle because the service contains too many private properties'
+      ],
+      correctOptionIndex: 1,
+    },
+    {
+      id: 'oop-11',
+      categoryId: 'oop',
+      text: 'A notification system should allow new notification types without repeatedly modifying existing notification logic. Which SOLID principle helps achieve this?',
+      options: [
+        'Single Responsibility Principle because every notification must remain in one class',
+        'Interface Segregation Principle because all notification methods should be separated',
+        'Open/Closed Principle because behavior can be extended without modifying stable code',
+        'Dependency Inversion Principle because every notification must depend on concrete classes'
+      ],
+      correctOptionIndex: 2,
+    },
+    {
+      id: 'oop-12',
+      categoryId: 'oop',
+      text: 'A class depends directly on StripePayment instead of a generic PaymentGateway abstraction. Which SOLID principle should guide the redesign?',
+      options: [
+        'Single Responsibility Principle because the payment class should only contain one method',
+        'Open/Closed Principle because StripePayment should never be changed after deployment',
+        'Liskov Substitution Principle because StripePayment must replace every payment class',
+        'Dependency Inversion Principle because high-level code should depend on abstractions'
+      ],
+      correctOptionIndex: 3,
+    },
+    {
+      id: 'oop-13',
+      categoryId: 'oop',
+      text: 'A class requires methods for printing, scanning, faxing, and emailing, but one client only prints. What would improve the design?',
+      options: [
+        'Split the large interface into smaller interfaces containing focused capabilities',
+        'Force every client to implement all methods so the interface stays consistent',
+        'Use inheritance to make every client inherit every unnecessary operation',
+        'Use a singleton so clients can selectively disable unwanted interface methods'
+      ],
+      correctOptionIndex: 0,
+    },
+    {
+      id: 'oop-14',
+      categoryId: 'oop',
+      text: 'A game has many object types with shared behavior, but changes to the parent class frequently break child classes. What should be considered?',
+      options: [
+        'Add more inheritance levels so common behavior can be shared more aggressively',
+        'Prefer composition where behaviors can be assembled without tightly coupled inheritance',
+        'Make every child class directly modify the parent implementation when needed',
+        'Use singleton objects so every game object shares the same parent state'
+      ],
+      correctOptionIndex: 1,
+    },
+    {
+      id: 'oop-15',
+      categoryId: 'oop',
+      text: 'An application creates many related objects depending on configuration, and construction logic is becoming scattered throughout the code. Which pattern can help?',
+      options: [
+        'Observer Pattern because construction events should be broadcast to application components',
+        'Adapter Pattern because object construction should translate between different interfaces',
+        'Factory Pattern because object creation can be centralized behind a clear abstraction',
+        'Strategy Pattern because object construction should always represent interchangeable algorithms'
+      ],
+      correctOptionIndex: 2,
+    },
+    {
+      id: 'oop-16',
+      categoryId: 'oop',
+      text: 'A complex report object has many optional settings and requires careful construction order. Which pattern can make its creation clearer?',
+      options: [
+        'Singleton Pattern because complex objects should have exactly one global instance',
+        'Adapter Pattern because optional settings must be translated between incompatible APIs',
+        'Observer Pattern because every construction step should notify other application components',
+        'Builder Pattern because complex objects can be constructed through readable incremental steps'
+      ],
+      correctOptionIndex: 3,
+    },
+    {
+      id: 'oop-17',
+      categoryId: 'oop',
+      text: 'A dashboard should automatically refresh whenever the underlying data model changes. Which OOP pattern is appropriate?',
+      options: [
+        'Observer Pattern because subscribers can react when the subject changes state',
+        'Factory Pattern because the dashboard should create a new model whenever data changes',
+        'Adapter Pattern because dashboard components need translation between data formats',
+        'Builder Pattern because dashboard updates require multiple construction stages'
+      ],
+      correctOptionIndex: 0,
+    },
+    {
+      id: 'oop-18',
+      categoryId: 'oop',
+      text: 'A configuration object must remain unchanged after creation so multiple services can safely share it. Which approach is best?',
+      options: [
+        'Use inheritance so every service can modify configuration through specialized subclasses',
+        'Use immutability so the configuration state cannot be changed after construction',
+        'Use public mutable fields so every service can update configuration when required',
+        'Use singleton state so every service can directly modify the same configuration object'
+      ],
+      correctOptionIndex: 1,
+    },
+    {
+      id: 'oop-19',
+      categoryId: 'oop',
+      text: 'A class exposes all of its internal fields publicly, allowing any module to change its state. What is the main design concern?',
+      options: [
+        'Polymorphism is weakened because every public property automatically becomes virtual',
+        'Inheritance is weakened because public fields cannot be inherited by child classes',
+        'Encapsulation is weakened because internal state is exposed without controlled access',
+        'Abstraction is strengthened because callers can directly inspect every implementation detail'
+      ],
+      correctOptionIndex: 2,
+    },
+    {
+      id: 'oop-20',
+      categoryId: 'oop',
+      text: 'A reusable library should allow developers to use functionality without exposing its internal algorithms. Which OOP concept supports this goal?',
+      options: [
+        'Inheritance because developers should receive every internal implementation through subclasses',
+        'Polymorphism because developers should directly access every concrete implementation',
+        'Composition because developers should embed all library implementation details in their code',
+        'Abstraction because the public API can hide complex internal implementation details'
+      ],
+      correctOptionIndex: 3,
+    },
+    {
+      id: 'oop-21',
+      categoryId: 'oop',
+      text: 'A web application has Customer, Admin, and Guest users that all need a common authenticate() operation. What is a suitable design?',
+      options: [
+        'Define a common user abstraction and let each user type provide its authentication behavior',
+        'Create separate unrelated authentication functions with different method names for every user',
+        'Store every authentication implementation inside one massive conditional statement',
+        'Make Guest inherit all Admin behavior so every user shares the same permissions'
+      ],
+      correctOptionIndex: 0,
+    },
+    {
+      id: 'oop-22',
+      categoryId: 'oop',
+      text: 'An application has a growing switch statement that selects behavior based on customer type. What could reduce this conditional complexity?',
+      options: [
+        'Add more conditions so every new customer type remains inside the same switch statement',
+        'Use polymorphism so each customer type can provide its own implementation of the behavior',
+        'Move the switch statement into another class while keeping all customer behavior centralized',
+        'Create global variables containing every customer behavior and select them manually'
+      ],
+      correctOptionIndex: 1,
+    },
+    {
+      id: 'oop-23',
+      categoryId: 'oop',
+      text: 'A service should work with PostgreSQL today and MongoDB tomorrow without changing its business logic. Which design is preferable?',
+      options: [
+        'Hard-code both databases inside the service and select one using environment conditions',
+        'Create separate service classes for every database and duplicate business logic between them',
+        'Depend on a repository abstraction and provide different database-specific implementations',
+        'Make the business service inherit directly from both database client implementations'
+      ],
+      correctOptionIndex: 2,
+    },
+    {
+      id: 'oop-24',
+      categoryId: 'oop',
+      text: 'A team wants to reuse a common authentication workflow while allowing individual applications to customize specific steps. Which approach fits?',
+      options: [
+        'Use a singleton so every application shares exactly the same authentication implementation',
+        'Use an adapter so every authentication step can translate into a different API format',
+        'Use a factory so applications can construct authentication workflows without overriding behavior',
+        'Use an abstract class with shared workflow logic and overridable implementation steps'
+      ],
+      correctOptionIndex: 3,
+    },
+    {
+      id: 'oop-25',
+      categoryId: 'oop',
+      text: 'A shopping cart directly creates EmailService, PaymentService, and InventoryService objects, making unit tests difficult. What should be changed?',
+      options: [
+        'Inject service dependencies into the shopping cart instead of constructing concrete services internally',
+        'Make every service a singleton so tests can replace the same global object when necessary',
+        'Use inheritance so the shopping cart becomes a specialized version of every service it requires',
+        'Expose all service objects publicly so test cases can modify their implementations directly'
+      ],
+      correctOptionIndex: 0,
+    },
+    {
+      id: 'oop-26',
+      categoryId: 'oop',
+      text: 'A developer creates a subclass only to reuse two utility methods from another class. What is usually a better alternative?',
+      options: [
+        'Create another inheritance layer so the utility methods become available through multiple parents',
+        'Use composition or a focused utility abstraction instead of creating unnecessary inheritance',
+        'Make the original class global so every application component can access its utility methods',
+        'Duplicate the utility methods because reusable code should never be shared across classes'
+      ],
+      correctOptionIndex: 1,
+    },
+    {
+      id: 'oop-27',
+      categoryId: 'oop',
+      text: 'A logistics application supports truck, ship, and air delivery, each calculating delivery cost differently. What design best supports future delivery types?',
+      options: [
+        'Put every delivery calculation inside one large method with many conditional branches',
+        'Create unrelated delivery classes with duplicated calculation and validation logic',
+        'Define a delivery abstraction and allow each delivery type to implement its calculation behavior',
+        'Create one delivery subclass and continuously modify it whenever a new delivery type appears'
+      ],
+      correctOptionIndex: 2,
+    },
+    {
+      id: 'oop-28',
+      categoryId: 'oop',
+      text: 'A system needs exactly one shared application configuration instance throughout its lifetime. Which pattern can enforce this requirement?',
+      options: [
+        'Factory Pattern because factories guarantee that every created object has identical state',
+        'Observer Pattern because observers guarantee that only one object receives configuration updates',
+        'Adapter Pattern because adapters prevent multiple implementations from accessing configuration',
+        'Singleton Pattern because it restricts creation to a single shared instance'
+      ],
+      correctOptionIndex: 3,
+    },
+    {
+      id: 'oop-29',
+      categoryId: 'oop',
+      text: 'A class has methods for authentication, database queries, password hashing, email delivery, and audit logging. How should it be improved?',
+      options: [
+        'Split responsibilities into focused classes so each component has a clear reason to change',
+        'Keep the class together because centralized functionality always improves application scalability',
+        'Add inheritance so every responsibility can be moved into a specialized subclass hierarchy',
+        'Convert all methods into static functions so the class becomes easier to access globally'
+      ],
+      correctOptionIndex: 0,
+    },
+    {
+      id: 'oop-30',
+      categoryId: 'oop',
+      text: 'A testing team wants to replace a real payment gateway with a fake implementation during unit tests. Which OOP practice makes this easiest?',
+      options: [
+        'Use inheritance from the real payment gateway and override every production method during tests',
+        'Depend on an abstraction so a mock or fake implementation can be injected during testing',
+        'Expose the real payment gateway publicly so tests can change its private implementation details',
+        'Use global state so tests can replace the production gateway whenever a test starts'
+      ],
+      correctOptionIndex: 1,
+    },
+    {
+      id: 'oop-31',
+      categoryId: 'oop',
+      text: 'A developer creates a Rectangle subclass from a Square class, but changing width independently breaks expected Rectangle behavior. What should be reconsidered?',
+      options: [
+        'Encapsulation should be removed so the subclass can directly control every inherited property',
+        'Composition should be avoided because geometric objects should always use inheritance relationships',
+        'The inheritance relationship should be reconsidered because the subtype violates expected substitutability',
+        'Polymorphism should be removed because subclasses should never override methods from parent classes'
+      ],
+      correctOptionIndex: 2,
+    },
+    {
+      id: 'oop-32',
+      categoryId: 'oop',
+      text: 'A class has many optional constructor parameters and developers frequently pass arguments in the wrong order. Which pattern can improve this?',
+      options: [
+        'Observer Pattern because constructor changes should automatically notify dependent objects',
+        'Singleton Pattern because one correctly configured object eliminates constructor complexity',
+        'Adapter Pattern because constructors should translate positional arguments into object properties',
+        'Builder Pattern because named construction steps reduce confusion around optional parameters'
+      ],
+      correctOptionIndex: 3,
+    },
+    {
+      id: 'oop-33',
+      categoryId: 'oop',
+      text: 'A large application has several modules that depend directly on concrete logging implementations. What architecture would make replacing the logger easier?',
+      options: [
+        'Introduce a logging abstraction and inject concrete logger implementations into dependent modules',
+        'Make every module inherit from the concrete logger so replacement happens through inheritance',
+        'Copy logger code into every module so no module depends on an external implementation',
+        'Use a public global logger variable so every module can modify its implementation directly'
+      ],
+      correctOptionIndex: 0,
+    },
+    {
+      id: 'oop-34',
+      categoryId: 'oop',
+      text: 'A document editor supports PDF, Word, and HTML export, and each exporter has a different implementation behind one export operation. What concept is being used?',
+      options: [
+        'Encapsulation because every exporter keeps its implementation completely inaccessible to the editor',
+        'Polymorphism because different exporter objects respond to the same operation differently',
+        'Inheritance because every exporter must contain identical export implementation code internally',
+        'Composition because the editor must contain the entire implementation of every exporter'
+      ],
+      correctOptionIndex: 1,
+    },
+    {
+      id: 'oop-35',
+      categoryId: 'oop',
+      text: 'A team wants to prevent callers from putting an invalid negative balance into a BankAccount object. What is a good OOP design?',
+      options: [
+        'Expose the balance publicly and ask every caller to validate the value before updating it',
+        'Use inheritance so every account subclass can decide whether negative balances are acceptable',
+        'Keep the balance controlled internally and expose validated operations for changing account state',
+        'Store the balance in a global variable so all account operations can validate it centrally'
+      ],
+      correctOptionIndex: 2,
+    },
+    {
+      id: 'oop-36',
+      categoryId: 'oop',
+      text: 'An application must create different report objects based on report type, but callers should not know the concrete classes. Which pattern is appropriate?',
+      options: [
+        'Observer Pattern because report creation should notify every part of the application',
+        'Strategy Pattern because each report type represents an interchangeable business algorithm',
+        'Adapter Pattern because report types must translate between different report interfaces',
+        'Factory Pattern because object creation can be hidden behind a common creation interface'
+      ],
+      correctOptionIndex: 3,
+    },
+    {
+      id: 'oop-37',
+      categoryId: 'oop',
+      text: 'A team wants to share behavior between objects without creating a rigid class hierarchy that becomes difficult to change. What should they favor?',
+      options: [
+        'Favor composition so reusable behaviors can be assembled and replaced independently',
+        'Favor deep inheritance so every shared behavior automatically propagates through the hierarchy',
+        'Favor global objects so every class can reuse behavior without declaring dependencies',
+        'Favor duplicated implementations so classes never become dependent on reusable components'
+      ],
+      correctOptionIndex: 0,
+    },
+    {
+      id: 'oop-38',
+      categoryId: 'oop',
+      text: 'A notification manager should notify email, SMS, and push subscribers whenever an order status changes. Which design is most suitable?',
+      options: [
+        'Use a factory so every status change creates a new notification manager for each subscriber',
+        'Use the Observer Pattern so subscribers react automatically to order status changes',
+        'Use an adapter so every subscriber translates the order status into a common constructor format',
+        'Use a builder so every notification is assembled through a separate sequence of construction steps'
+      ],
+      correctOptionIndex: 1,
+    },
+    {
+      id: 'oop-39',
+      categoryId: 'oop',
+      text: 'A company wants to expose a reusable payment library while preventing consumers from depending on its internal payment classes. What should the library provide?',
+      options: [
+        'Expose every concrete class so consumers can choose whichever internal implementation they prefer',
+        'Expose database and payment internals because consumers need maximum control over library behavior',
+        'Expose a stable abstraction or public interface while keeping implementation classes internal',
+        'Expose all internal methods as public methods so consumers can customize every payment operation'
+      ],
+      correctOptionIndex: 2,
+    },
+    {
+      id: 'oop-40',
+      categoryId: 'oop',
+      text: 'An application is becoming difficult to maintain because objects contain too many unrelated responsibilities and depend heavily on concrete implementations. What overall approach is most appropriate?',
+      options: [
+        'Add more global state and inheritance so existing objects can share responsibilities automatically',
+        'Keep the current structure and rely on comments because changing object relationships creates risk',
+        'Merge related classes together so fewer objects exist even if each object gains more responsibilities',
+        'Apply separation of responsibilities, abstractions, composition, and dependency injection where appropriate'
+      ],
+      correctOptionIndex: 3,
+    }
   ],
-  correctOptionIndex: 2,
-},
-  ]
 };
 
 export const getQuestionsForCategory = (categoryId: string): Question[] => {
